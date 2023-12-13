@@ -19,7 +19,7 @@ provider "aws" {
 data "terraform_remote_state" "networking" {          // This is to use Outputs from Remote State
   backend = "s3"
   config = {
-    bucket = "acs730-final-project-group2"             // Bucket from where to GET Terraform State
+    bucket = "acs730-final-project-group2-${var.env}"      // Bucket from where to GET Terraform State
     key    = "${var.env}/network/terraform.tfstate"              // Region where bucket created
     region = "us-east-1"
   }
