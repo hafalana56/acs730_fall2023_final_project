@@ -1,5 +1,5 @@
 
-###ACS730 Final Project (Two-tier Web Application Automation Using Terraform, Ansible and GitHub Actions)
+##ACS730 Final Project (Two-tier Web Application Automation Using Terraform, Ansible and GitHub Actions)
 
 ###Deployment pre-requisites:
 Create an S3 bucket with unique names for the three environments (dev, prod and staging). The bucket will store Terraform state.
@@ -12,45 +12,51 @@ public VMs.
 ```
 2. Update the desired input varibles in dev/network and deploy dev/network with the commands below
 ```
-   cd ~/webappproject/terraform/dev/network
+   cd ~/dev/network
    tf init
    tf plan
    tf apply --auto-approve 
 ```
 3. Update the desired input varibles in prod/network and deploy prod/network with the commands below
 ```
-   cd ~/webappproject/terraform/prod/network
+   cd ~/prod/network
    tf init
    tf plan
    tf apply --auto-approve 
 ```
-4. Create a custom SSH key pair in ~/.ssh/dev-key for remote access to the dev VMs
+4. Update the desired input varibles in staging/network and deploy staging/network with the commands below
+```
+   cd ~/prod/network
+   tf init
+   tf plan
+   tf apply --auto-approve 
+5. Create a custom SSH key pair in ~/.ssh/dev-key for remote access to the dev VMs
 ``` 
    
    ssh-keygen -t rsa -f ~/.ssh/dev-key
    
-5. Deploy webserver VMs in dev/webservers
+6. Deploy webserver VMs in dev/webservers
 ```
    tf init
    tf plan
    tf apply --auto-approve
 
-6. Create a custom SSH key pair in ~/.ssh/ for remote access to the prod VMs (
+7. Create a custom SSH key pair in ~/.ssh/ for remote access to the prod VMs (
    
    ssh-keygen -t rsa -f ~/.ssh/prod-key
    
-7. Deploy webserver VMs in prod/webservers
+8. Deploy webserver VMs in prod/webservers
 ```
    tf init
    tf plan
    tf apply --auto-approve
    
    
-6. Create a custom SSH key pair in ~/.ssh/ for remote access to the staging VMs (
+9. Create a custom SSH key pair in ~/.ssh/ for remote access to the staging VMs (
    
    ssh-keygen -t rsa -f ~/.ssh/staging-key
    
-7. Deploy webserver VMs in staging/webservers
+10. Deploy webserver VMs in staging/webservers
 ```
    tf init
    tf plan
