@@ -1,0 +1,10 @@
+[windows]
+54.160.213.10
+
+[linux]
+linux3 ansible_host=184.73.5.103    owner=acs730
+linux4 ansible_host=34.232.134.252  owner=caaacs
+
+[servers_all:children]
+linux
+windows
