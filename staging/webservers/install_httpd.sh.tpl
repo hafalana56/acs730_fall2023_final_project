@@ -19,7 +19,7 @@ echo "<!DOCTYPE html>
         </h1>
         <hr>
         <h1>
-            This web server deployment has been carried out by the ACS730 Group 2 members<br>
+            This is a staging environment provisioned by ACS730 Group 2 members<br>
             <br>
             <strong style=color:#FF0000;>
                 Hafees Falana<br>
@@ -32,7 +32,7 @@ echo "<!DOCTYPE html>
         <h3>
             My private IP address is <font color="red">$myip</font>!</p>
         </h3>
-        <img src="https://acs730-final-project-group2.s3.amazonaws.com/Audi.jpg" alt="Sample Image">
+        <img src="https://acs730-final-project-group2-staging.s3.amazonaws.com/Tesla.png" alt="Sample Image">
         <br>The image above is being served from our S3 bucket
     </center>
 </body>
